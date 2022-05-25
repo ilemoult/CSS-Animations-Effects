@@ -1,0 +1,197 @@
+body{
+    background: linear-gradient(
+        to bottom,
+        #FF9E68, #FF68DE
+    );
+}
+
+.about{
+    font-size: 2rem;
+    color: white;
+    width: 40rem;
+    font-family: arial;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.animations{
+    margin-left: 2rem;
+}
+
+.button-effects{
+    display: block;
+    height: 100%;
+    width: 16rem;
+}
+
+.anaglyph{
+    color: black;
+    font-size: 5rem;
+    font-weight: bold;
+    background-color: white;
+    padding-left: 1rem;
+    width: 27rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 6px;
+    transition: 200ms;
+}
+
+.anaglyph:hover{
+    text-shadow: red -6px 0, cyan 6px 0;;
+}
+
+.click{
+    width: 12rem;
+    height: 5rem;
+    background-color: blue;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    border: none;margin-top: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: black 9px 9px 0px;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.click:active{
+    transform: translateY(9px) translateX(9px);
+    box-shadow: blue 0px 0px 0px;
+}
+
+.buynow{
+    cursor: pointer;
+    width: 12rem;
+    height: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+    border-radius: 0px;
+    transition: color 200ms;
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    position: relative;
+}
+
+.buynow:is(:hover,:focus){
+    color: white;
+    z-index: 6;
+}
+
+.buynow::after{
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: -1;
+    background-color: black;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 200ms;
+}
+
+.buynow:is(:hover,:focus)::after{
+    transform: scale(1);
+}
+
+.typing-effect{
+    width: 4.7ch;
+    font-size: 3rem;
+    overflow: hidden;
+    border-right: solid 1px;
+    animation: typing 1s steps(5);
+}
+
+@keyframes typing{
+    from{ width: 0ch;}
+}
+
+.get-started{
+    margin-top: 5rem;
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+}
+
+.get-started::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 3rem;
+    inset: 48.8rem 0px 0px 35px;
+    width: 3rem;
+    border-radius: 32px;
+    background-color: aquamarine;
+    z-index: -1;
+    transition: width 200ms;
+}
+
+.get-started:is(:hover,:focus)::before{
+    width: 14rem;
+}
+
+.non-rectangular{
+    margin-top: 5rem;
+    width: 30rem;
+}
+
+.head-liner{
+    background-color: rgb(64, 63, 63);
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.hamburger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.main{
+    background-color: black;
+    color: white;
+    padding-top: 1rem;
+    height: 17rem;
+    clip-path: 
+    polygon(
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 50px),
+        0% 100%
+    );
+}
+
+.main h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.main h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.main h1,h2{
+    margin-left: 2rem;
+}
+
+.buttom{
+    background-color: aquamarine;
+    height: 10rem;
+    position: relative;
+    top: -3rem;
+    z-index: -1;
+}
+
+.copy{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1rem 1rem 1rem 2rem;
+}
